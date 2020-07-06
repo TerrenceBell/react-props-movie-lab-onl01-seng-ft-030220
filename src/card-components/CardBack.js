@@ -12,6 +12,7 @@ export default class CardBack extends Component {
 
   generateRatingElement = () => {
     // implement meeeee! See the readme for instructions
+    return imgMapper.map(rating => <li>{rating}</li>)
   }
 
   render() {
@@ -19,7 +20,7 @@ export default class CardBack extends Component {
       <div className="card-back">
         <h3 className="title"></h3>
         <span />
-        { /* your rating element should go here -- you can invoke methods within JSX, à la: this.myMethod() */ }
+        {/* your rating element should go here -- you can invoke methods within JSX, à la: this.myMethod() */ }
         <span />
         <h5 className="genres"></h5>
       </div>
