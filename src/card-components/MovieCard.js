@@ -12,6 +12,7 @@ import ttm from '../assets/poster-imgs/the-trash-man.png'
 import React, { Component } from 'react';
 import CardFront from './CardFront.js';
 import CardBack from './CardBack.js';
+import { resetHistory } from 'sinon'
 
 
 const posterMap = {
@@ -30,12 +31,12 @@ const posterMap = {
 export default class MovieCard extends Component {
 
   render() {
-    console.log(this.props)
+    console.log('movieCard',this.props)
     return (
       <div className="movie-card">
         {/* which component should receive which props? */}
-        <CardFront />
-        <CardBack />
+        <CardFront poster={this.props.poster}/>
+        <CardBack title={this.props.title} rating={this.props.IMDBRating} geners={this.props.genres}/>
       </div>
     )
   }
