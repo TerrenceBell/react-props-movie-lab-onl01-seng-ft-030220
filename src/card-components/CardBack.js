@@ -33,7 +33,7 @@ export default class CardBack extends Component {
         <span />
         {}
         <span />
-        <h5 className="genres">{this.props.genres}</h5>
+        <h5 className="genres">{this.props.genres.join(', ')}</h5>
       </div>
     )
   }
